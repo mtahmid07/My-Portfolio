@@ -1,42 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skills - Mirza Tahmid Sarowar</title>
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Skills</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
+
+<header>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-  </header>
+</header>
 
-  <section class="hero">
-    <h1>Technical Skills</h1>
-  </section>
+<main>
+    <section class="skills-container">
+        <div class="skill-box" id="technical-skills">
+            <h2>Technical Skills</h2>
+            <p>Click to explore my technical expertise.</p>
+        </div>
+        <div class="skill-box" id="soft-skills">
+            <h2>Soft Skills</h2>
+            <p>Click to explore my personal and interpersonal skills.</p>
+        </div>
+    </section>
 
-  <section>
-    <h2>Front-End Development</h2>
-    <p>HTML, CSS, JavaScript, React.js, Next.js, TypeScript</p>
-    <h2>Back-End Development</h2>
-    <p>Node.js, Express.js</p>
-    <h2>Databases</h2>
-    <p>MongoDB, PostgreSQL</p>
-    <h2>Tools</h2>
-    <p>Git, Postman, Heroku, Vercel</p>
-  </section>
+    <!-- Skills Lists Section -->
+    <section class="skills-list" id="technical-skills-list" style="display: none;">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>Programming Languages: Java, Python, JavaScript</li>
+            <li>Web Development: HTML, CSS, JavaScript, React</li>
+            <li>Database Management: MySQL, MongoDB</li>
+            <li>Version Control: Git</li>
+            <li>Software Development Tools: IntelliJ IDEA, VS Code</li>
+            <li>Operating Systems: Linux, Windows</li>
+        </ul>
+    </section>
 
-  <footer>
-    <p>© 2024 Mirza Tahmid Sarowar | Full Stack Web Developer</p>
-  </footer>
+    <section class="skills-list" id="soft-skills-list" style="display: none;">
+        <h2>Soft Skills</h2>
+        <ul>
+            <li>Communication: Clear and effective communication skills</li>
+            <li>Teamwork: Collaborative and team-oriented</li>
+            <li>Problem-Solving: Analytical and solution-driven</li>
+            <li>Time Management: Prioritizing and managing tasks effectively</li>
+            <li>Adaptability: Able to work in dynamic environments</li>
+            <li>Leadership: Motivating and guiding teams towards success</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Tahmid. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // JavaScript to handle skill box clicks and toggle visibility of skills lists
+    document.getElementById('technical-skills').addEventListener('click', function() {
+        document.getElementById('technical-skills-list').style.display = 'block';
+        document.getElementById('soft-skills-list').style.display = 'none';
+    });
+
+    document.getElementById('soft-skills').addEventListener('click', function() {
+        document.getElementById('soft-skills-list').style.display = 'block';
+        document.getElementById('technical-skills-list').style.display = 'none';
+    });
+</script>
+
 </body>
 </html>
